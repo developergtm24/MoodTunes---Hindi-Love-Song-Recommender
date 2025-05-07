@@ -1,0 +1,149 @@
+:root {
+  --primary: #ff4d8d;
+  --secondary: #ff85a2;
+  --dark: #3a0ca3;
+  --light: #f8f9fa;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+header {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.mood-selector {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.mood-option {
+  background: white;
+  border: 2px solid var(--secondary);
+  border-radius: 10px;
+  padding: 15px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.mood-option:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 77, 141, 0.2);
+  border-color: var(--primary);
+}
+
+.mood-option.selected {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.result-container {
+  padding: 0 30px 30px;
+  display: none;
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.song-info {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.song-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.song-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.yt-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255,0,0,0.8);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.song-image-container:hover .yt-icon {
+  opacity: 1;
+}
+
+.btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 20px auto 0;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 77, 141, 0.4);
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodTunes - Hindi Love Song Recommender by developergtm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MoodTunes</h1>
+            <p>Find the perfect love song for your mood</p>
+        </header>
+        
+        <div class="mood-selector">
+          <div class="mood-option" data-mood="romantic">❤️ Romantic</div>
+          <div class="mood-option" data-mood="sad">😢 Sad</div>
+          <div class="mood-option" data-mood="crush">🥰 Crush</div>
+          <div class="mood-option" data-mood="happy">😊 Happy</div>
+          <div class="mood-option" data-mood="breakup">💔 Breakup</div>
+
+        </div>
+        
+        <div class="result-container" id="resultContainer">
+            <div class="song-info">
+                <h2 id="songTitle"></h2>
+                <p id="songArtist"></p>
+            </div>
+            <div class="song-image-container">
+                <img id="songImage" class="song-image" src="" alt="Song Cover">
+                <div class="yt-icon" id="ytIcon">
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+            <button class="btn" id="anotherBtn">other song</button>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>

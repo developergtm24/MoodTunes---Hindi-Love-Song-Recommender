@@ -1,0 +1,31 @@
+body {
+  background: #fff0f5;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  padding: 40px;
+  transition: background 0.5s;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+select {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.result {
+  margin-top: 30px;
+}
+
+iframe {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
